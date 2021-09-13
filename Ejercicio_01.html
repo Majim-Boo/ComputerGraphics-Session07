@@ -1,4 +1,4 @@
-<canvas id='canvas'width=800 height=600>
+<canvas id='canvas'width=600 height=400>
 <script>
 	function triangle(x1,y1,x2,y2,x3,y3, colorBorde, colorRelleno){
 		ctx.beginPath()//Para empezar el trazado. Sin esto, no se ve nada
@@ -18,8 +18,8 @@
 	ctx.strokeStyle = '#00FF00';
 	ctx.strokeRect(0,0,canvas.width, canvas.height)
 
-	ctx.fillRect(0,0,100,100)
-	ctx.rect(100,10,100,100);
+	ctx.strokeRect(0,0,100,100)
+	ctx.strokeRect(100,10,100,100);
 
 	triangle(20,20,45,67,40,200, 'cyan', 'red')
 	
