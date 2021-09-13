@@ -1,26 +1,6 @@
-<canvas id='canvas'width=800 height=600>
+<canvas id='canvas'>
 <script>
-	function triangle(x1,y1,x2,y2,x3,y3, colorBorde, colorRelleno){
-		ctx.beginPath()//Para empezar el trazado. Sin esto, no se ve nada
-		ctx.strokeStyle = colorBorde;
-		ctx.fillStyle = colorRelleno;
-		ctx.moveTo(x1,y1);
-		ctx.lineTo(x2,y2);
-		ctx.lineTo(x3,y3);
-		ctx.closePath()//para cerrar el trazado automáticamente al punto de inicio
-		//ctx.fill();
-		ctx.stroke();
-		ctx.fill();
-	}
 	var dibujo = document.getElementById('canvas')
 	var ctx = dibujo.getContext('2d');
-
-	ctx.strokeStyle = '#00FF00';
-	ctx.strokeRect(0,0,canvas.width, canvas.height)
-
-	ctx.fillRect(0,0,100,100)
-	ctx.rect(100,10,100,100);
-
-	triangle(20,20,45,67,40,200, 'cyan', 'red')
 	
 </script>
