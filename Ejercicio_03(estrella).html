@@ -1,8 +1,20 @@
-<canvas id='canvas'>
-<script>
-	var dibujo = document.getElementById('canvas')
-	var ctx = dibujo.getContext('2d');
-	ctx.fillRect(0,0,100,100)
-	ctx.rect(100,10,100,100);
+<canvas id='estrella' width=600 height=600>
+<script> 
+function polygon(a, colorBorde, grosorBorde, colorRelleno){
+	ctx.beginPath()
+	ctx.strokeStyle = colorBorde
+	ctx.lineWidth = grosorBorde
+	ctx.fillStyle = colorRelleno
+	ctx.moveTo(a[0], a[1])
+	for (i=2; i < a.length; i+=2)
+		ctx.lineTo(a[i], a[i+1]);
+	ctx.closePath()
+	ctx.stroke()
+	ctx.fill()
+}
+	var estrella = document.getElementById('estrella')
+	var ctx = estrella.getContext('2d');
+	
+	polygon([300,99, 372,198, 498,198, 436,300, 499,398, 372,399, 300,496, 226,399, 100,399, 162,300, 100,198, 228,198], '#C6A7B0', 20 ,'#E9E0E4')
 	
 </script>
